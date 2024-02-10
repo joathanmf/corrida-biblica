@@ -1,0 +1,25 @@
+<div class="container mt-2">
+  <%= render "layouts/desafios/header" %>
+  <p class="lead text-center">Prepare-se para os desafios</p>
+  <p class="text-center mb-4">Escolha um desafio</p>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Desafio 1</h5>
+          <p class="card-text">Encontre o versículo aleatório na bíblia</p>
+          <%= link_to "Jogar", desafio1_path, class: "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Desafio 2</h5>
+          <p class="card-text">Encontre o máximo de versículos</p>
+          <a class="btn btn-secondary" disabled>Em breve</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
