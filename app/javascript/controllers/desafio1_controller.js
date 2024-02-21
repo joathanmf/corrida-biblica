@@ -6,10 +6,11 @@ export default class extends Controller {
   btnStop = document.getElementById('btnStop');
 
   startChallenge() {
+    this.btnStart.innerHTML = "Próximo"
     this.btnStop.classList.remove('disabled');
   }
 
-  stopChallenge() {
+  stopChallenge(event) {
     event.preventDefault();
 
     this.btnStart.innerHTML = "Recomeçar";

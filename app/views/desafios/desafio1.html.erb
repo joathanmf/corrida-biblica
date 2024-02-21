@@ -5,7 +5,9 @@
       <div class="col-sm-12">
         <div class="card">
           <div class="card-body">
-            <h2 id="textoVersiculo">Clique para começar</h2>
+            <%= turbo_frame_tag "versiculo" do %>
+              <h2 id="textoVersiculo">Clique para começar</h2>
+            <% end %>
           </div>
         </div>
       </div>
@@ -17,6 +19,7 @@
             <%= link_to "Começar", desafios_versiculo_path,
               class: "btn btn-success", id: "btnStart",
               data: {
+                turbo_frame: "versiculo",
                 action: "click->desafio1#startChallenge"
               } %>
           </div>
