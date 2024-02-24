@@ -1,5 +1,5 @@
 class DesafiosController < ApplicationController
-  before_action :set_service, :set_versiculo, only: %i[desafio1 versiculo]
+  before_action :set_service, :set_versiculo, only: %i[versiculo]
 
   def index; end
 
