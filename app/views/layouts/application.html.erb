@@ -9,6 +9,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
   <body>
+    <%= turbo_frame_tag "config_modal" %>
     <%= yield %>
   </body>
 </html>

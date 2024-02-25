@@ -9,6 +9,13 @@ class DesafiosController < ApplicationController
     render turbo_frame: 'versiculo', locals: { versiculo: @versiculo }
   end
 
+  def config_modal; end
+
+  def config_salvar
+    session[:velho] = params[:velho].nil? ? false : params[:velho]
+    session[:novo] = params[:novo].nil? ? false : params[:novo]
+  end
+
   private
 
   def set_versiculo

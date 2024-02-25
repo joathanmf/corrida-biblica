@@ -6,6 +6,8 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 import Desafio1Controller from "./desafio1_controller"
+import ConfigModalController from "./config_modal_controller"
 
 application.register("hello", HelloController)
 application.register("desafio1", Desafio1Controller)
+application.register("config_modal", ConfigModalController)
