@@ -21,14 +21,8 @@ class VersiculoService
     versiculo = rand(1..livro_data[:versiculos][capitulo - 1])
 
     "#{livro} #{capitulo}:#{versiculo}"
-  rescue StandardError => e
-    puts "\n\nErro:"
-    puts "Livro: #{livro}"
-    puts "Dados do Livro: #{livro_data}"
-    puts "Capítulo: #{capitulo}"
-    puts "Versículo: #{versiculo}"
-    puts "Erro: #{e.message}"
-    puts "\n\n"
+  rescue StandardError
+    versiculo_aleatorio(dados)
   end
 
   def velho_testamento
