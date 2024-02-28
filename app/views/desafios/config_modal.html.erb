@@ -10,12 +10,12 @@
           <%= form_with url: desafios_config_salvar_path do |form| %>
             <div class="modal-body">
               <div class="form-check form-switch">
-                <%= check_box_tag 'velho', true, switch_velho, class: 'form-check-input', id: 'velho_switch' %>
+                <%= check_box_tag 'velho', true, switch_velho, class: 'form-check-input', id: 'velho_switch', data: { action: "config_modal#checkbox"} %>
                 <%= label_tag 'velho_switch', 'Velho Testamento', class: 'form-check-label' %>
               </div>
               <br>
               <div class="form-check form-switch">
-                <%= check_box_tag 'novo', true, switch_novo, class: 'form-check-input', id: 'novo_switch' %>
+                <%= check_box_tag 'novo', true, switch_novo, class: 'form-check-input', id: 'novo_switch', data: { action: "config_modal#checkbox"} %>
                 <%= label_tag 'novo_switch', 'Novo Testamento', class: 'form-check-label' %>
               </div>
             </div>
