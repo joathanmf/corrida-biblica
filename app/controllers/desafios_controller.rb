@@ -14,12 +14,14 @@ class DesafiosController < ApplicationController
   def config_salvar
     session[:velho] = params[:velho].nil? ? false : params[:velho]
     session[:novo] = params[:novo].nil? ? false : params[:novo]
+
+    head :ok
   end
 
   private
 
   def set_versiculo
-    @versiculo = @versiculo_service.versiculo
+    @versiculo = @versiculo_service.versiculo(session[:velho], session[:novo])
   end
 
   def set_service

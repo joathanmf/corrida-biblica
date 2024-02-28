@@ -1,11 +1,11 @@
 class VersiculoService
   def initialize; end
 
-  def versiculo
+  def versiculo(velho = true, novo = true)
     livros = {}
 
-    livros.merge!(velho_testamento)
-    livros.merge!(novo_testamento)
+    livros.merge!(velho_testamento) if velho
+    livros.merge!(novo_testamento) if novo
 
     versiculo_aleatorio(livros)
   end
@@ -21,10 +21,18 @@ class VersiculoService
     versiculo = rand(1..livro_data[:versiculos][capitulo - 1])
 
     "#{livro} #{capitulo}:#{versiculo}"
+  rescue StandardError => e
+    puts "\n\nErro:"
+    puts "Livro: #{livro}"
+    puts "Dados do Livro: #{livro_data}"
+    puts "Capítulo: #{capitulo}"
+    puts "Versículo: #{versiculo}"
+    puts "Erro: #{e.message}"
+    puts "\n\n"
   end
 
   def velho_testamento
-    versiculos = {
+    {
       "Gênesis": {
         "capitulos": 50,
         "versiculos": [
@@ -260,12 +268,10 @@ class VersiculoService
         ]
       }
     }
-
-    versiculos
   end
 
   def novo_testamento
-    versiculos = {
+    {
       "Mateus": {
         "capitulos": 28,
         "versiculos": [
@@ -429,7 +435,5 @@ class VersiculoService
         ]
       }
     }
-
-    versiculos
   end
 end

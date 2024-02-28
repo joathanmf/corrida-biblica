@@ -18,4 +18,8 @@ export default class extends Controller {
   isOpen() {
     return this.element.classList.contains("show")
   }
+
+  save_config() {
+    this.modal.hide()
+  }
 }

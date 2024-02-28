@@ -20,7 +20,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <%= submit_tag "Salvar", class: "btn btn-success" %>
+              <%= submit_tag "Salvar", class: "btn btn-success", data: { action: "config_modal#save_config" } %>
             </div>
           <% end %>
         </div>
