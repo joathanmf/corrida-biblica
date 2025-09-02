@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DesafiosController < ApplicationController
   before_action :set_service, :set_versiculo, only: %i[versiculo]
 
