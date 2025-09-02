@@ -7,16 +7,16 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </div>
         <div class="modal-body">
-          <%= form_with url: challengers_config_salvar_path do |form| %>
+          <%= form_with url: challengers_save_config_path do |form| %>
             <div class="modal-body">
               <div class="form-check form-switch">
-                <%= check_box_tag 'old', true, switch_old, class: 'form-check-input', id: 'old_switch', data: { action: "config_modal#checkbox"} %>
-                <%= label_tag 'old_switch', 'old Testamento', class: 'form-check-label' %>
+                <%= check_box_tag 'old', true, switch_old, class: 'form-check-input', id: 'old_switch', data: { action: "config_modal#checkbox" } %>
+                <%= label_tag 'old_switch', 'Antigo Testamento', class: 'form-check-label' %>
               </div>
               <br>
               <div class="form-check form-switch">
-                <%= check_box_tag 'new', true, switch_new, class: 'form-check-input', id: 'new_switch', data: { action: "config_modal#checkbox"} %>
-                <%= label_tag 'new_switch', 'new Testamento', class: 'form-check-label' %>
+                <%= check_box_tag 'new', true, switch_new, class: 'form-check-input', id: 'new_switch', data: { action: "config_modal#checkbox" } %>
+                <%= label_tag 'new_switch', 'Novo Testamento', class: 'form-check-label' %>
               </div>
             </div>
             <div class="modal-footer">
@@ -26,4 +26,5 @@
         </div>
       </div>
     </div>
-  <% end %>
+  </div>
+<% end %>

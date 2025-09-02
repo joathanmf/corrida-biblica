@@ -27,6 +27,6 @@ class ChallengersController < ApplicationController
   end
 
   def set_service
-    @verse_service = verseService.new
+    @verse_service = VerseService.new
   end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class verseService
+class VerseService
   def initialize; end
 
   def verse(old = true, new = true)
