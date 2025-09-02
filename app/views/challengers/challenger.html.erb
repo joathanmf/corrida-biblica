@@ -1,12 +1,12 @@
 <div data-controller="desafio1">
   <div class="container mt-2">
-    <%= render "layouts/desafios/header" %>
+    <%= render "layouts/challengers/header" %>
     <div class="row mt-4 text-center">
       <div class="col-sm-12">
         <div class="card">
           <div class="card-body">
-            <%= turbo_frame_tag "versiculo" do %>
-              <h2 id="textoVersiculo">Clique para começar</h2>
+            <%= turbo_frame_tag "verse" do %>
+              <h2 id="textoverse">Clique para começar</h2>
             <% end %>
           </div>
         </div>
@@ -16,10 +16,10 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <%= link_to "Começar", desafios_versiculo_path,
+            <%= link_to "Começar", challengers_verse_path,
               class: "btn btn-success", id: "btnStart",
               data: {
-                turbo_frame: "versiculo",
+                turbo_frame: "verse",
                 action: "click->desafio1#startChallenge"
               } %>
           </div>

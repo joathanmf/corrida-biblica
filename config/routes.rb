@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get '/', to: 'desafios#index'
-  get '/desafio1', to: 'desafios#desafio1'
-  get 'desafios/versiculo'
-  get 'desafios/config_modal'
-  post 'desafios/config_salvar'
+  get '/', to: 'challengers#index'
+  get '/challenger', to: 'challengers#challenger'
+  get 'challengers/verse', to: 'challengers#verse'
+  get 'challengers/config_modal', to: 'challengers#config_modal'
+  post 'challengers/save_config', to: 'challengers#save_config'
 
-  root 'desafios#index'
+  root 'challengers#index'
 end

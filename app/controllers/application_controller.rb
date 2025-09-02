@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_session
 
   def set_session
-    session[:velho] = true if session[:velho].nil?
-    session[:novo] = true if session[:novo].nil?
+    session[:old] = true if session[:old].nil?
+    session[:new] = true if session[:new].nil?
   end
 end

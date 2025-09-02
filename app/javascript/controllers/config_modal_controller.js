@@ -24,18 +24,18 @@ export default class extends Controller {
   }
 
   checkbox() {
-    const velhoSwitch = document.getElementById('velho_switch');
-    const novoSwitch = document.getElementById('novo_switch');
+    const oldSwitch = document.getElementById('old_switch');
+    const newSwitch = document.getElementById('new_switch');
 
-    velhoSwitch.addEventListener('change', function () {
-      if (!velhoSwitch.checked && !novoSwitch.checked) {
-        novoSwitch.checked = true;
+    oldSwitch.addEventListener('change', function () {
+      if (!oldSwitch.checked && !newSwitch.checked) {
+        newSwitch.checked = true;
       }
     });
 
-    novoSwitch.addEventListener('change', function () {
-      if (!novoSwitch.checked && !velhoSwitch.checked) {
-        velhoSwitch.checked = true;
+    newSwitch.addEventListener('change', function () {
+      if (!newSwitch.checked && !oldSwitch.checked) {
+        oldSwitch.checked = true;
       }
     });
   }
